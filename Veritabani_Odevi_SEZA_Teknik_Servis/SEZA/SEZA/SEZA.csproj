@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EBAA3F0A-E7CA-48DD-868A-E2E872428F01}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SEZA</RootNamespace>
+    <AssemblyName>SEZA</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.118.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CihazKaydi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CihazKaydi.Designer.cs">
+      <DependentUpon>CihazKaydi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEZATEKNİKSERVİSİDataSet101.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet101.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SEZATEKNİKSERVİSİDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SEZATEKNİKSERVİSİDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SEZATEKNİKSERVİSİDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TeknisyenKaydiSilme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeknisyenKaydiSilme.Designer.cs">
+      <DependentUpon>TeknisyenKaydiSilme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriKaydiSilme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriKaydiSilme.Designer.cs">
+      <DependentUpon>MusteriKaydiSilme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEZATEKNİKSERVİSİDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TeknisyenCihazSorgu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeknisyenCihazSorgu.Designer.cs">
+      <DependentUpon>TeknisyenCihazSorgu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEZATEKNİKSERVİSİDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UcretBilgisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UcretBilgisi.Designer.cs">
+      <DependentUpon>UcretBilgisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IslemSorgu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IslemSorgu.Designer.cs">
+      <DependentUpon>IslemSorgu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GirisEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GirisEkrani.Designer.cs">
+      <DependentUpon>GirisEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriKaydi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriKaydi.Designer.cs">
+      <DependentUpon>MusteriKaydi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEZATEKNİKSERVİSİDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SEZATEKNİKSERVİSİDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SEZATEKNİKSERVİSİDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SEZATEKNİKSERVİSİDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TeknisyenKaydi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeknisyenKaydi.Designer.cs">
+      <DependentUpon>TeknisyenKaydi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SEZATEKNİKSERVİSİDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CihazKaydi.resx">
+      <DependentUpon>CihazKaydi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeknisyenKaydiSilme.resx">
+      <DependentUpon>TeknisyenKaydiSilme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteriKaydiSilme.resx">
+      <DependentUpon>MusteriKaydiSilme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeknisyenCihazSorgu.resx">
+      <DependentUpon>TeknisyenCihazSorgu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcretBilgisi.resx">
+      <DependentUpon>UcretBilgisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GirisEkrani.resx">
+      <DependentUpon>GirisEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IslemSorgu.resx">
+      <DependentUpon>IslemSorgu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteriKaydi.resx">
+      <DependentUpon>MusteriKaydi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeknisyenKaydi.resx">
+      <DependentUpon>TeknisyenKaydi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SEZATEKNİKSERVİSİDataSet.xsc">
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SEZATEKNİKSERVİSİDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet.xss">
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet1.xsc">
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SEZATEKNİKSERVİSİDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet1.xss">
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet101.xsc">
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet101.xsd</DependentUpon>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet101.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SEZATEKNİKSERVİSİDataSet101.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet101.xss">
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet101.xsd</DependentUpon>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet2.xsc">
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SEZATEKNİKSERVİSİDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet2.xss">
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet3.xsc">
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SEZATEKNİKSERVİSİDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet3.xss">
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet4.xsc">
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SEZATEKNİKSERVİSİDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet4.xss">
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet5.xsc">
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SEZATEKNİKSERVİSİDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet5.xss">
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet6.xsc">
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SEZATEKNİKSERVİSİDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet6.xss">
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet7.xsc">
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SEZATEKNİKSERVİSİDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet7.xss">
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet8.xsc">
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SEZATEKNİKSERVİSİDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet8.xss">
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet9.xsc">
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SEZATEKNİKSERVİSİDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SEZATEKNİKSERVİSİDataSet9.xss">
+      <DependentUpon>SEZATEKNİKSERVİSİDataSet9.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

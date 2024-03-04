@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SEZATEKNİKSERVİSİDataSet10" targetNamespace="http://tempuri.org/SEZATEKNİKSERVİSİDataSet10.xsd" xmlns:mstns="http://tempuri.org/SEZATEKNİKSERVİSİDataSet10.xsd" xmlns="http://tempuri.org/SEZATEKNİKSERVİSİDataSet10.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SEZATEKNİKSERVİSİConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SEZATEKNİKSERVİSİConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SEZA.Properties.Settings.GlobalReference.Default.SEZATEKNİKSERVİSİConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UcretSorguTableAdapter" GeneratorDataComponentClassName="UcretSorguTableAdapter" Name="UcretSorgu" UserDataComponentName="UcretSorguTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SEZATEKNİKSERVİSİConnectionString (Settings)" DbObjectName="SEZATEKNİKSERVİSİ.dbo.UcretSorgu" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT musteri_id, m_ad, m_soyad, fiyat FROM dbo.UcretSorgu</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="musteri_id" DataSetColumn="musteri_id" />
+              <Mapping SourceColumn="m_ad" DataSetColumn="m_ad" />
+              <Mapping SourceColumn="m_soyad" DataSetColumn="m_soyad" />
+              <Mapping SourceColumn="fiyat" DataSetColumn="fiyat" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SEZATEKNİKSERVİSİDataSet10" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="SEZATEKNİKSERVİSİDataSet10" msprop:Generator_DataSetName="SEZATEKNİKSERVİSİDataSet10">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="UcretSorgu" msprop:Generator_RowEvHandlerName="UcretSorguRowChangeEventHandler" msprop:Generator_RowDeletedName="UcretSorguRowDeleted" msprop:Generator_RowDeletingName="UcretSorguRowDeleting" msprop:Generator_RowEvArgName="UcretSorguRowChangeEvent" msprop:Generator_TablePropName="UcretSorgu" msprop:Generator_RowChangedName="UcretSorguRowChanged" msprop:Generator_RowChangingName="UcretSorguRowChanging" msprop:Generator_TableClassName="UcretSorguDataTable" msprop:Generator_RowClassName="UcretSorguRow" msprop:Generator_TableVarName="tableUcretSorgu" msprop:Generator_UserTableName="UcretSorgu">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="musteri_id" msprop:Generator_ColumnPropNameInRow="musteri_id" msprop:Generator_ColumnPropNameInTable="musteri_idColumn" msprop:Generator_ColumnVarNameInTable="columnmusteri_id" msprop:Generator_UserColumnName="musteri_id" type="xs:int" />
+              <xs:element name="m_ad" msprop:Generator_ColumnPropNameInRow="m_ad" msprop:Generator_ColumnPropNameInTable="m_adColumn" msprop:Generator_ColumnVarNameInTable="columnm_ad" msprop:Generator_UserColumnName="m_ad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="m_soyad" msprop:Generator_ColumnPropNameInRow="m_soyad" msprop:Generator_ColumnPropNameInTable="m_soyadColumn" msprop:Generator_ColumnVarNameInTable="columnm_soyad" msprop:Generator_UserColumnName="m_soyad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fiyat" msprop:Generator_ColumnPropNameInRow="fiyat" msprop:Generator_ColumnPropNameInTable="fiyatColumn" msprop:Generator_ColumnVarNameInTable="columnfiyat" msprop:Generator_UserColumnName="fiyat" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:UcretSorgu" />
+      <xs:field xpath="mstns:musteri_id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
